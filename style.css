@@ -135,6 +135,13 @@ nav a:hover {
   font-size: 18px;
 }
 
+.section-subtitle {
+  max-width: 720px;
+  margin: -10px auto 35px;
+  color: #ddd;
+  font-size: 17px;
+}
+
 .cards {
   display: flex;
   justify-content: center;
@@ -170,6 +177,37 @@ nav a:hover {
 }
 
 .card p {
+  color: #f8c045;
+  font-weight: 700;
+}
+
+.advisory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.advisory-card {
+  background: linear-gradient(145deg, rgba(248,192,69,0.16), rgba(255,255,255,0.07));
+  border: 1px solid rgba(248,192,69,0.28);
+  padding: 22px;
+  border-radius: 18px;
+  transition: 0.3s;
+}
+
+.advisory-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 35px rgba(248,192,69,0.18);
+}
+
+.advisory-card h3 {
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.advisory-card p {
   color: #f8c045;
   font-weight: 700;
 }
