@@ -17,6 +17,27 @@ fetch("members.json")
     console.error("Error loading members:", error);
   });
 
+fetch("advisory.json")
+  .then(response => response.json())
+  .then(advisoryMembers => {
+    const advisoryList = document.getElementById("advisoryList");
+
+    advisoryMembers.forEach(member => {
+      const div = document.createElement("div");
+      div.className = "advisory-card";
+
+      div.innerHTML = `
+        <h3>${member}</h3>
+        <p>Advisory Member</p>
+      `;
+
+      advisoryList.appendChild(div);
+    });
+  })
+  .catch(error => {
+    console.error("Error loading advisory committee:", error);
+  });
+
 fetch("gallery.json")
   .then(response => response.json())
   .then(images => {
